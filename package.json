@@ -1,0 +1,30 @@
+{
+  "name": "blattom",
+  "version": "1.0.0",
+  "description": "Searching for Sans",
+  "main": "index.js",
+  "dependencies": {
+    "chainfetch": "^1.2.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "fs-nextra": "^0.3.7",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunburntRock89/Blattom.git"
+  },
+  "author": "SunburntRock89, TheRandomMelon, AO554",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/SunburntRock89/Blattom/issues"
+  },
+  "homepage": "https://github.com/SunburntRock89/Blattom#readme"
+}
