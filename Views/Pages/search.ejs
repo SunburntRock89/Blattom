@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+
+<body style="text-align: center; font-family:'Comic Sans MS';">
+	<img src="logo.png">
+	
+	<form action="/search">
+		<input type="text" value="<%= query %>" minlength="1" id="q" name="q">
+		<input type="submit" value="Search">
+	</form>
+
+	<p>Searching for <%= query %></p><br>
+	<p style="text-align: center; margin-bottom: 5px;" class="has-text-grey">About <%= matches %> results</p>
+	<% for (let i of results) { %>
+	<div style="font-family: 'Comic Sans MS'; margin-bottom: 15px;">
+		<p class="has-text-success">
+			<a class="has-text-success" href="<%= i.url %>"><%= i.name %></a>
+			<% if (!i.isFamilyFriendly) { %>
+				<marquee><span class="tag is-danger is-large" style="font-size:2.5rem !important;">NOT FAMILY FRIENDLY !1</span></marquee>
+			<% } %>
+		</p>
+		<p class="has-text-grey-light">
+			<a class="has-text-grey-light" href="<%= i.url %>"><%= i.url %></a>
+		</p>
+		<p><%= i.snippet %></p>
+	</div>
+	<% } %>
+</body>
