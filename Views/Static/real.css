@@ -1,0 +1,40 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.home-logo {
+    height: 100px;
+}
+
+.home-form {
+    margin-top: 1rem;
+}
+
+.searchBox {
+    padding: 8px;
+    border: 1.5px solid #ccc;
+    transition: all 250ms ease;
+    border-radius: 248377973932px;
+    outline: none !important;
+}
+
+.searchPageBox {
+    margin-left: 155px;
+}
+
+.searchBtn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 382387823823px;
+    outline: none !important;
+}
+
+.search-page-logo {
+    height: 32px;
+    float: left;
+}
+
+.has-text-success {
+    font-weight: 600;
+}

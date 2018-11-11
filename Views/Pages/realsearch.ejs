@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+<link rel="stylesheet" href="/real.css" />
+
+<body style="margin: 8px; margin-top:14px;">
+    <a href="/real">
+        <img class="search-page-logo" src="/reallogo.png">
+    </a>
+	
+	<form action="/real/search" class="searchPageBox">
+		<input class="searchBox" type="text" value="<%= query %>" minlength="1" id="q" name="q">
+		<input class="searchBtn" type="submit" value="Search">
+	</form>
+
+    <p style="margin-bottom: 10px;">Searching for <%= query %> - <span class="has-text-grey">About <%= matches %> results</span></p>
+
+	<% for (let i of results) { %>
+	<div style="margin-bottom: 15px;">
+		<p class="has-text-success">
+			<a class="has-text-success" href="<%= i.url %>">
+                <%= i.name %> 
+                <% if (!i.isFamilyFriendly) { %>
+                    <span class="tag is-danger is-small">NSFW</span>
+                <% } %>
+            </a>
+		</p>
+		<p class="has-text-grey-light">
+			<a class="has-text-grey-light" href="<%= i.url %>"><%= i.url %></a>
+		</p>
+		<p><%= i.snippet %></p>
+	</div>
+	<% } %>
+	<p>© Blattom Dev Team - in partnership with Melonz</p>
+</body>
