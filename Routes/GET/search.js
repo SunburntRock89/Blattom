@@ -4,8 +4,9 @@ const { get } = require("chainfetch");
 module.exports = async(req, res) => {
 	if (req.query.q == "") return res.redirect("/");
 
-	let result = await get(`https://api.cognitive.microsoft.com/bing/v7.0/search?q=${encodeURIComponent(req.query.q)}`)
-		.set("Ocp-Apim-Subscription-Key", config.bingKey);
+	let result = await get(`https://api.cognitive.microsoft.com/bing/v7.0/search?q=${encodeURIComponent(req.query.q)}&cc=GB&mkt=en-GB`)
+		.set("Ocp-Apim-Subscription-Key", config.bingKey)
+		.set("Accept-Language", "en-GB");
 
 	let resultsToSend = result.body.webPages.value;
 
